@@ -14,25 +14,25 @@
             @apply block mb-2 text-sm font-medium text-gray-300;
         }
         .form-input {
-            @apply bg-gray-800 border-2 border-gray-600 text-white text-sm rounded-lg block w-full p-3 transition-all duration-300;
+            @apply bg-gray-200 border-2 border-gray-400 text-sm rounded-lg block w-full p-3 transition-all duration-300;
+            color: black; /* 确保输入文字为黑色 */
         }
         .form-input::placeholder {
-            color: #9ca3af;
+            color: #6b7280;
         }
         .form-input:focus {
-            @apply bg-gray-700 border-blue-500 ring-0 outline-none shadow-lg shadow-blue-500/20;
+            @apply bg-white border-blue-500 ring-0 outline-none shadow-lg shadow-blue-500/20;
         }
         .form-radio-label {
              @apply ms-2 text-sm font-medium text-gray-300;
         }
         /* Style for date picker icon */
         input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(1);
             cursor: pointer;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-pink">
+<body class="bg-gray-900 text-white">
 
     <div class="min-h-screen flex items-center justify-center p-4" style="background: radial-gradient(circle, rgba(31,41,55,1) 0%, rgba(17,24,39,1) 100%);">
         <div class="w-full max-w-md mx-auto bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl shadow-blue-500/10 p-8 border border-gray-700">
@@ -154,7 +154,3 @@
     </script>
 </body>
 </html>
-
-
-
-
