@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉林省AI人工智能发展商会 - 入会申请</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .form-label {
+            @apply block mb-2 text-sm font-medium text-gray-300;
+        }
+        .form-input {
+            @apply bg-gray-800 border-2 border-gray-600 text-white text-sm rounded-lg block w-full p-3 transition-all duration-300;
+        }
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+        .form-input:focus {
+            @apply bg-gray-700 border-blue-500 ring-0 outline-none shadow-lg shadow-blue-500/20;
+        }
+        .form-radio-label {
+             @apply ms-2 text-sm font-medium text-gray-300;
+        }
+        /* Style for date picker icon */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div class="min-h-screen flex items-center justify-center p-4" style="background: radial-gradient(circle, rgba(31,41,55,1) 0%, rgba(17,24,39,1) 100%);">
+        <div class="w-full max-w-md mx-auto bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl shadow-blue-500/10 p-8 border border-gray-700">
+            
+            <!-- Header Section -->
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 mb-4">
+                    吉林省AI人工智能发展商会
+                </h1>
+                <p class="text-md text-gray-400 leading-relaxed max-w-xl mx-auto">
+                    欢迎加入！以 “赋能・创新・协作” 为纽带，共享技术资源、共解行业难题。开启智能合作之门，同路人携手，创AI产业新篇！
+                </p>
+            </div>
+
+            <!-- Form Section -->
+            <form id="applicationForm" class="space-y-6">
+                <div>
+                    <label for="name" class="form-label">姓名</label>
+                    <input type="text" id="name" class="form-input" placeholder="请输入您的姓名" required>
+                </div>
+                <div>
+                    <label class="form-label">性别</label>
+                    <div class="flex items-center space-x-6 pt-1">
+                        <div class="flex items-center">
+                            <input id="gender-male" type="radio" value="男" name="gender" class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 focus:ring-blue-600">
+                            <label for="gender-male" class="form-radio-label">男</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="gender-female" type="radio" value="女" name="gender" class="w-4 h-4 text-pink-600 bg-gray-700 border-gray-600 focus:ring-pink-600">
+                            <label for="gender-female" class="form-radio-label">女</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="education" class="form-label">学历</label>
+                    <input type="text" id="education" class="form-input" placeholder="例如：本科 / 硕士">
+                </div>
+                <div>
+                    <label for="dob" class="form-label">出生日期</label>
+                    <input type="date" id="dob" class="form-input">
+                </div>
+
+                <div>
+                    <label for="political_status" class="form-label">政治面貌</label>
+                    <input type="text" id="political_status" class="form-input" placeholder="例如：群众 / 党员">
+                </div>
+
+                <hr class="border-gray-600 my-4">
+
+                <div>
+                    <label for="company_name" class="form-label">单位名称</label>
+                    <input type="text" id="company_name" class="form-input" placeholder="请输入完整的公司/单位名称" required>
+                </div>
+                <div>
+                    <label for="position" class="form-label">职务</label>
+                    <input type="text" id="position" class="form-input" placeholder="例如：总经理 / 技术总监">
+                </div>
+                
+                <div>
+                    <label for="main_business" class="form-label">公司主营</label>
+                    <textarea id="main_business" rows="3" class="form-input" placeholder="简要介绍公司核心业务"></textarea>
+                </div>
+                
+                <div>
+                    <label for="phone" class="form-label">联系电话</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="请输入您的手机号码" required>
+                </div>
+
+                <div>
+                    <label for="company_address" class="form-label">公司地址</label>
+                    <input type="text" id="company_address" class="form-input" placeholder="请输入详细的公司地址">
+                </div>
+
+                <div>
+                    <label for="referrer" class="form-label">推荐人</label>
+                    <input type="text" id="referrer" class="form-input" placeholder="如有推荐人，请填写其姓名">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-6">
+                    <button type="submit" class="w-full text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-3 text-center transition-all duration-300 transform hover:scale-105">
+                        提交申请
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Success Message Modal -->
+    <div id="successMessage" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-lg p-8 text-center shadow-lg border border-gray-700">
+            <h3 class="text-xl font-bold text-green-400 mb-4">提交成功！</h3>
+            <p class="text-gray-300 mb-6">我们已收到您的入会申请，将尽快与您联系。</p>
+            <button onclick="closeMessage()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg">
+                关闭
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('applicationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default page reload
+            
+            // Here you would typically send the form data to a server.
+            // For this example, we'll just show the success message.
+            console.log('Form submitted. Data would be sent to a server.');
+            
+            successMessage.classList.remove('hidden');
+            form.reset(); // Clear the form fields
+        });
+
+        function closeMessage() {
+            successMessage.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
+
